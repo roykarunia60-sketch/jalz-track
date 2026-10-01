@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IP Address - JALZ CRACK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f3f6fb; --ink:#10131a; --muted:#566079; --accent:#0057ff; --accent2:#ff2d78;
+    --card:#ffffff; --line:#c9d4ea; --err:#d90429; --ok:#00a650; --warn:#ff6b00;
+    --btntxt:#ffffff; --glow:none; --tglow:none; --drop:none;
+  }
+  [data-theme="dark"] {
+    --bg:#07060f; --ink:#e9f7ff; --muted:#8aa0c8; --accent:#00f0ff; --accent2:#ff2bd6;
+    --card:#0f0d1f; --line:rgba(0,240,255,.45); --err:#ff4d6d; --ok:#39ff88; --warn:#ffb000;
+    --btntxt:#041018;
+    --glow:0 0 8px rgba(0,240,255,.55), 0 0 22px rgba(0,240,255,.3);
+    --tglow:0 0 6px currentColor, 0 0 20px currentColor;
+    --drop:drop-shadow(0 0 6px #ff2bd6) drop-shadow(0 0 16px #00f0ff);
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: Georgia, "Times New Roman", serif; line-height:1.5; transition:background .25s, color .25s; }
+  main { max-width:560px; margin:0 auto; padding:28px 20px 40px; }
+  .top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px; }
+  .kredit { font-family:"Orbitron", "Arial Black", Impact, sans-serif; font-weight:900; font-size:1.35rem; letter-spacing:.14em;
+    background:linear-gradient(90deg, var(--accent2), var(--accent)); -webkit-background-clip:text; background-clip:text; color:transparent; filter:var(--drop); }
+  h1 { font-size:2rem; margin:0 0 6px; letter-spacing:-0.01em; color:var(--accent); text-shadow:var(--tglow); }
+  p.sub { margin:0 0 24px; color:var(--muted); }
+  .bar { display:flex; gap:8px; }
+  input { flex:1; min-width:0; padding:12px 14px; font:inherit; font-size:1.05rem; color:var(--ink); background:var(--card); border:2px solid var(--line); border-radius:8px; }
+  input:focus { border-color:var(--accent); box-shadow:var(--glow); }
+  button { padding:12px 18px; font:inherit; font-weight:bold; color:var(--btntxt); background:var(--accent); border:0; border-radius:8px; cursor:pointer; box-shadow:var(--glow); }
+  button:disabled { opacity:.6; cursor:wait; }
+  input:focus-visible, button:focus-visible, a:focus-visible { outline:3px solid var(--accent2); outline-offset:2px; }
+  .hint { margin:10px 0 0; font-size:.9rem; color:var(--muted); }
+  #hasil { margin-top:24px; }
+  .err { color:var(--err); font-weight:bold; }
+  .head { display:flex; align-items:baseline; gap:12px; margin-bottom:12px; }
+  .head .ip { font-size:1.6rem; font-weight:bold; word-break:break-all; color:var(--accent2); text-shadow:var(--tglow); }
+  h2 { font-size:1rem; margin:20px 0 8px; color:var(--accent); font-weight:bold; text-shadow:var(--tglow); }
+  dl { margin:0; background:var(--card); border:2px solid var(--line); border-radius:8px; box-shadow:var(--glow); }
+  .row { display:flex; justify-content:space-between; gap:16px; padding:12px 16px; border-top:1px solid var(--line); }
+  .row:first-child { border-top:0; }
+  dt { color:var(--muted); }
+  dd { margin:0; text-align:right; word-break:break-word; }
+  .ya { color:var(--warn); font-weight:bold; text-shadow:var(--tglow); }
+  .tidak { color:var(--ok); font-weight:bold; text-shadow:var(--tglow); }
+  .verdict { font-weight:bold; color:var(--accent2); }
+  .sub2 { color:var(--muted); font-size:.85rem; }
+  a { color:var(--accent); font-weight:bold; }
+  @media (prefers-reduced-motion: reduce) { body { transition:none; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="top"><div class="kredit">JALZ CRACK</div></div>
+  <h1>Cek IP Address</h1>
+  <p class="sub">Track Location Via IP</p>
+
+  <div class="bar">
+    <input id="ip" type="text" placeholder="Masukkan IP" aria-label="IP address" autocomplete="off">
+    <button id="tombol" type="button">Cari</button>
+  </div>
+  <p class="hint">Tekan Cari untuk melihat IP kamu. Ada jeda 1 menit setelah pencarian.</p>
+
+  <div id="hasil" aria-live="polite"></div>
+</main>
+
+<script>
+const input = document.getElementById('ip');
+const tombol = document.getElementById('tombol');
+const hasil = document.getElementById('hasil');
+
+
+const BENUA = { AF:'Afrika', AN:'Antartika', AS:'Asia', EU:'Eropa', NA:'Amerika Utara', OC:'Oseania', SA:'Amerika Selatan' };
+
+const PROVINSI = {
+  'aceh':'Aceh','sumatera utara':'North Sumatra','sumatera barat':'West Sumatra','riau':'Riau','kepulauan riau':'Riau Islands',
+  'jambi':'Jambi','sumatera selatan':'South Sumatra','kepulauan bangka belitung':'Bangka Belitung Islands','bangka belitung':'Bangka Belitung Islands',
+  'bengkulu':'Bengkulu','lampung':'Lampung','dki jakarta':'Jakarta','daerah khusus ibukota jakarta':'Jakarta','jakarta':'Jakarta','banten':'Banten',
+  'jawa barat':'West Java','jawa tengah':'Central Java','di yogyakarta':'Yogyakarta','daerah istimewa yogyakarta':'Yogyakarta','jawa timur':'East Java',
+  'bali':'Bali','nusa tenggara barat':'West Nusa Tenggara','nusa tenggara timur':'East Nusa Tenggara',
+  'kalimantan barat':'West Kalimantan','kalimantan tengah':'Central Kalimantan','kalimantan selatan':'South Kalimantan','kalimantan timur':'East Kalimantan','kalimantan utara':'North Kalimantan',
+  'sulawesi utara':'North Sulawesi','gorontalo':'Gorontalo','sulawesi tengah':'Central Sulawesi','sulawesi barat':'West Sulawesi','sulawesi selatan':'South Sulawesi','sulawesi tenggara':'Southeast Sulawesi',
+  'maluku':'Maluku','maluku utara':'North Maluku','papua':'Papua','papua barat':'West Papua','papua barat daya':'Southwest Papua','papua selatan':'South Papua','papua tengah':'Central Papua','papua pegunungan':'Highland Papua'
+};
+function inggris(n) { return (n && PROVINSI[String(n).trim().toLowerCase()]) || n; }
+
+function esc(s) {
+  return String(s ?? '-').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function yaTidak(v) {
+  if (v === undefined) return '-';
+  return v ? '<span class="ya">Ya</span>' : '<span class="tidak">Tidak</span>';
+}
+function perangkat() {
+  const u = navigator.userAgent;
+  let os = /Android/i.test(u) ? 'Android' : /iPhone|iPad|iPod/i.test(u) ? 'iOS' : /Windows/i.test(u) ? 'Windows' : /Mac OS/i.test(u) ? 'macOS' : /Linux/i.test(u) ? 'Linux' : 'Tidak diketahui';
+  let br = /Edg\//.test(u) ? 'Edge' : /OPR\//.test(u) ? 'Opera' : /Firefox\//.test(u) ? 'Firefox' : /Chrome\//.test(u) ? 'Chrome' : /Safari\//.test(u) ? 'Safari' : 'Browser lain';
+  const tipe = /Mobi|Android|iPhone/i.test(u) ? 'HP' : 'Komputer';
+  return tipe + ' - ' + os + ' - ' + br;
+}
+async function perangkatDetail() {
+  const u = navigator.userAgent;
+  let os = 'Tidak diketahui', ver = '', m;
+  if ((m = u.match(/Android ([\d.]+)/))) { os = 'Android'; ver = m[1]; }
+  else if ((m = u.match(/OS (\d+[_\d]*) like Mac/))) { os = 'iOS'; ver = m[1].replace(/_/g, '.'); }
+  else if (/Windows NT/.test(u)) { os = 'Windows'; }
+  else if (/Mac OS X/.test(u)) { os = 'macOS'; }
+  else if (/Linux/.test(u)) { os = 'Linux'; }
+  let hv = {};
+  try { if (navigator.userAgentData) hv = await navigator.userAgentData.getHighEntropyValues(['model', 'platformVersion']); } catch (err) {}
+  if (os === 'Windows' && hv.platformVersion) ver = parseInt(hv.platformVersion) >= 13 ? '11' : '10';
+  if (os === 'Android' && !ver && hv.platformVersion) ver = hv.platformVersion;
+  let model = hv.model || ((m = u.match(/;\s*([^;)]+?)\s+Build/)) ? m[1] : '');
+  if (model === 'K') model = '';
+  const tipe = /Mobi|Android|iPhone/i.test(u) ? 'HP' : 'Komputer';
+  const br = /Edg\//.test(u) ? 'Edge' : /OPR\//.test(u) ? 'Opera' : /Firefox\//.test(u) ? 'Firefox' : /Chrome\//.test(u) ? 'Chrome' : /Safari\//.test(u) ? 'Safari' : 'Browser lain';
+  return { nama: (model || tipe) + ' - ' + br, os: os + (ver ? ' ' + ver : '') };
+}
+function deteksiVpn(d) {
+  if (d.fallback) return 'Tidak Terdeteksi';
+  if (d.is_vpn) return 'Terdeteksi VPN';
+  if (d.is_tor) return 'Terdeteksi Tor';
+  if (d.is_proxy) return 'Terdeteksi proxy';
+  if (d.is_datacenter) return 'IP milik server hosting';
+  return 'Tidak terdeteksi VPN';
+}
+
+async function ambil(url, ubah) {
+  const asnNorm = v => { const m = String(v == null ? '' : v).match(/\d+/); return m ? 'AS' + m[0] : ''; };
+  try {
+    const x = await (await fetch(url)).json();
+    const r = ubah(x);
+    if (!r) return { ok: false, msg: 'Tidak ada data lokasi' };
+    ['country', 'region', 'city'].forEach(k => { if (r[k] === 'nil' || r[k] === 'None' || r[k] == null) r[k] = ''; });
+    r.zip = (r.zip == null || r.zip === 'nil') ? '' : String(r.zip);
+    r.asn = asnNorm(r.asn);
+    return (r.country || r.region || r.city) ? Object.assign({ ok: true }, r) : { ok: false, msg: 'Tidak ada data lokasi' };
+  } catch (err) { return { ok: false, msg: 'Gagal dipanggil' }; }
+}
+async function bandingkan(ip) {
+  const q = encodeURIComponent(ip).replace(/%3A/gi, ':');
+  const daftar = [
+    ['ipapi.is', 'https://api.ipapi.is/?q=' + q, x => x.location && { country: x.location.country, region: x.location.state, city: x.location.city, zip: x.location.zip, asn: x.asn && x.asn.asn }],
+    ['ipwho.is', 'https://ipwho.is/' + q, x => x.success && { country: x.country, region: x.region, city: x.city, zip: x.postal, asn: x.connection && x.connection.asn }],
+    ['ipinfo.io', 'https://ipinfo.io/' + q + '/json', x => !x.error && !x.bogon && { country: x.country, region: x.region, city: x.city, zip: x.postal, asn: x.org }],
+    ['ipapi.co', 'https://ipapi.co/' + q + '/json/', x => !x.error && { country: x.country_name, region: x.region, city: x.city, zip: x.postal, asn: x.asn }],
+    ['freeipapi.com', 'https://freeipapi.com/api/json/' + q, x => x.countryName && { country: x.countryName, region: x.regionName, city: x.cityName, zip: x.zipCode, asn: x.asn }],
+    ['geojs.io', 'https://get.geojs.io/v1/ip/geo/' + q + '.json', x => ({ country: x.country, region: x.region, city: x.city, zip: '', asn: x.asn })],
+    ['db-ip.com', 'https://api.db-ip.com/v2/free/' + q, x => !x.error && { country: x.countryName, region: x.stateProv, city: x.city, zip: '', asn: '' }],
+    ['ipwhois.app', 'https://ipwhois.app/json/' + q, x => x.success && { country: x.country, region: x.region, city: x.city, zip: x.postal, asn: x.asn }],
+  ];
+  const semua = await Promise.all(daftar.map(d => ambil(d[1], d[2])));
+  return daftar.map((d, i) => [d[0], semua[i]]);
+}
+function versiIp(ip) {
+  const t = String(ip || '');
+  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(t)) return '<span class="tidak">IPv4</span>';
+  if (t.includes(':')) return '<span class="ya">IPv6</span>';
+  return '-';
+}
+async function ipv6Kamu() {
+  try {
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), 6000);
+    const x = await (await fetch('https://api64.ipify.org?format=json', { signal: c.signal })).json();
+    clearTimeout(t);
+    if (x.ip && x.ip.includes(':')) return x.ip;
+    return 'Tidak ada IPv6, koneksimu IPv4';
+  } catch (err) { return 'Gagal dicek (diblokir atau timeout), belum tentu tidak ada IPv6'; }
+}
+
+async function cari() {
+  if (tombol.disabled) return;
+  const ip = input.value.trim();
+  tombol.disabled = true;
+  hasil.innerHTML = '<p>Mencari...</p>';
+  try {
+    const r = await fetch('https://api.ipapi.is/' + (ip ? '?q=' + encodeURIComponent(ip).replace(/%3A/gi, ':') : ''));
+    let d = await r.json().catch(() => ({}));
+    let pesan = d.error;
+    if (!d.location) {
+      try {
+        const w = await (await fetch('https://ipwho.is/' + encodeURIComponent(ip).replace(/%3A/gi, ':'))).json();
+        if (w.success) {
+          d = { ip: w.ip, fallback: true, note: pesan || 'Not Detect',
+            location: { continent: w.continent_code, country: w.country, state: w.region, city: w.city, zip: w.postal, latitude: w.latitude, longitude: w.longitude, timezone: w.timezone && w.timezone.id },
+            company: { name: w.connection && w.connection.isp },
+            asn: { asn: w.connection && w.connection.asn, org: w.connection && w.connection.org } };
+        } else { pesan = pesan || w.message; }
+      } catch (err) {}
+    }
+    if (!d.location) {
+      hasil.innerHTML = '<p class="err">IP Not Detect' + (pesan ? ' (' + esc(pesan) + ')' : '') + '. Cek penulisan IP, coba lagi.</p>';
+      return;
+    }
+    const l = d.location;
+    let wilayah = l.state;
+    try {
+      const g = await (await fetch('https://nominatim.openstreetmap.org/reverse?format=json&accept-language=en&zoom=8&lat=' + l.latitude + '&lon=' + l.longitude)).json();
+      if (g.address && g.address.state) wilayah = g.address.state;
+    } catch (err) {}
+
+    wilayah = inggris(wilayah);
+    const org = (d.company && d.company.name) || (d.asn && d.asn.org);
+    const baris = (judul, rows) => '<h2>' + judul + '</h2><dl>' +
+      rows.map(([k, v]) => '<div class="row"><dt>' + k + '</dt><dd>' + v + '</dd></div>').join('') + '</dl>';
+
+    const lokasi = baris('Lokasi', [
+      ['Continent', esc(BENUA[l.continent] || l.continent)],
+      ['Country', esc(l.country)],
+      ['Region', esc(wilayah)],
+      ['City', esc(l.city)],
+      ['Zip code', esc(l.zip)],
+      ['Latitude / Longitude', esc(l.latitude) + ', ' + esc(l.longitude)],
+      ['Time zone', esc(l.timezone)],
+    ]);
+    const jaringan = baris('Jaringan', [
+      ['Versi IP', versiIp(d.ip)],
+      ['Organization', esc(org)],
+      ['ASN', d.asn ? 'AS' + esc(d.asn.asn) : '-'],
+      ['Mobile', yaTidak(d.is_mobile)],
+      ['Proxy', yaTidak(d.is_proxy)],
+      ['Hosting', yaTidak(d.is_datacenter)],
+    ]);
+    const keamanan = baris('Deteksi VPN', [
+      ['Hasil', '<span class="verdict">' + esc(deteksiVpn(d)) + '</span>'],
+      ['VPN', yaTidak(d.is_vpn)],
+      ['Tor', yaTidak(d.is_tor)],
+      ...(d.fallback ? [['Alasan', esc(d.note)]] : []),
+    ]);
+    const p = await perangkatDetail();
+    const v6 = await ipv6Kamu();
+    const device = baris('Device kamu (bukan pemilik IP)', [['Perangkat', esc(p.nama)], ['Sistem operasi', esc(p.os)], ['IPv6 koneksi kamu', esc(v6)]]);
+    const banding = await bandingkan(d.ip);
+    const nOk = banding.filter(b => b[1].ok).length;
+    const perbandingan = baris('Perbandingan database (' + nOk + ' dari ' + banding.length + ' mengenali lokasi)',
+      banding.map(([n, r]) => [n, r.ok ? esc([r.city, r.region, r.country].filter(Boolean).join(', ')) + '<br><small class="sub2">ZIP ' + esc(r.zip || '-') + ' · ASN ' + esc(r.asn || '-') + '</small>' : '<span class="ya">' + r.msg + '</span>']));
+    const peta = 'https://www.google.com/maps?q=' + encodeURIComponent(l.latitude + ',' + l.longitude);
+
+    hasil.innerHTML =
+      '<div class="head"><span class="ip">' + esc(d.ip) + '</span></div>' +
+      lokasi + perbandingan + jaringan + keamanan + device +
+      '<p class="hint"><a href="' + peta + '" target="_blank" rel="noopener">Lihat di peta</a>. Lokasi hanya perkiraan. Deteksi VPN berdasarkan daftar server yang diketahui, jadi tidak selalu tepat. Device menunjukkan perangkat yang kamu pakai sekarang, bukan pemilik IP yang dicari.</p>';
+  } catch (err) {
+    hasil.innerHTML = '<p class="err">Gagal terhubung. Cek koneksi internetmu, coba lagi.</p>';
+  } finally {
+    mulaiJeda(60);
+  }
+}
+
+let jedaTimer = null;
+function mulaiJeda(detik) {
+  let sisa = detik;
+  try { localStorage.setItem('jedaSampai', String(Date.now() + detik * 1000)); } catch (err) {}
+  tombol.disabled = true;
+  tombol.textContent = 'Tunggu ' + sisa + ' dtk';
+  clearInterval(jedaTimer);
+  jedaTimer = setInterval(() => {
+    sisa--;
+    if (sisa <= 0) {
+      clearInterval(jedaTimer);
+      tombol.disabled = false;
+      tombol.textContent = 'Cari';
+    } else {
+      tombol.textContent = 'Tunggu ' + sisa + ' dtk';
+    }
+  }, 1000);
+}
+try {
+  const sisaMs = Number(localStorage.getItem('jedaSampai')) - Date.now();
+  if (sisaMs > 1000) mulaiJeda(Math.ceil(sisaMs / 1000));
+} catch (err) {}
+
+tombol.addEventListener('click', cari);
+input.addEventListener('keydown', e => { if (e.key === 'Enter') cari(); });
+</script>
+</body>
+</html>
