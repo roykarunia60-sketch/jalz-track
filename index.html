@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IP Address - JALZ CRACK</title>
+<title>Cek IP Address - JALZ CRACK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
 <style>
@@ -21,19 +21,31 @@
     --drop:drop-shadow(0 0 6px #ff2bd6) drop-shadow(0 0 16px #00f0ff);
   }
   * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font-family: Georgia, "Times New Roman", serif; line-height:1.5; transition:background .25s, color .25s; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; line-height:1.5; transition:background .25s, color .25s; }
   main { max-width:560px; margin:0 auto; padding:28px 20px 40px; }
   .top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px; }
   .kredit { font-family:"Orbitron", "Arial Black", Impact, sans-serif; font-weight:900; font-size:1.35rem; letter-spacing:.14em;
-    background:linear-gradient(90deg, var(--accent2), var(--accent)); -webkit-background-clip:text; background-clip:text; color:transparent; filter:var(--drop); }
+    color:#ff2bd6; animation: disko 7.2s steps(1, end) infinite, kedip 2.4s ease-in-out infinite alternate; }
+  @keyframes disko {
+    0%   { color:#ff2bd6; text-shadow:0 0 6px #ff2bd6, 0 0 20px #ff2bd6; }
+    16%  { color:#00f0ff; text-shadow:0 0 6px #00f0ff, 0 0 20px #00f0ff; }
+    33%  { color:#39ff88; text-shadow:0 0 6px #39ff88, 0 0 20px #39ff88; }
+    50%  { color:#ffe600; text-shadow:0 0 6px #ffe600, 0 0 20px #ffe600; }
+    66%  { color:#ff6b00; text-shadow:0 0 6px #ff6b00, 0 0 20px #ff6b00; }
+    83%  { color:#8a6bff; text-shadow:0 0 6px #8a6bff, 0 0 20px #8a6bff; }
+    100% { color:#ff2bd6; text-shadow:0 0 6px #ff2bd6, 0 0 20px #ff2bd6; }
+  }
+  @keyframes kedip { from { opacity:1; } to { opacity:0; } }
+  @media (prefers-reduced-motion: reduce) { .kredit { animation:none; text-shadow:0 0 8px #ff2bd6; } }
   h1 { font-size:2rem; margin:0 0 6px; letter-spacing:-0.01em; color:var(--accent); text-shadow:var(--tglow); }
   p.sub { margin:0 0 24px; color:var(--muted); }
   .bar { display:flex; gap:8px; }
   input { flex:1; min-width:0; padding:12px 14px; font:inherit; font-size:1.05rem; color:var(--ink); background:var(--card); border:2px solid var(--line); border-radius:8px; }
-  input:focus { border-color:var(--accent); box-shadow:var(--glow); }
+  input { caret-color:var(--accent); }
+  input:focus, input:focus-visible { outline:none; border-color:var(--accent); box-shadow:0 0 6px var(--accent), 0 0 18px var(--accent); }
   button { padding:12px 18px; font:inherit; font-weight:bold; color:var(--btntxt); background:var(--accent); border:0; border-radius:8px; cursor:pointer; box-shadow:var(--glow); }
   button:disabled { opacity:.6; cursor:wait; }
-  input:focus-visible, button:focus-visible, a:focus-visible { outline:3px solid var(--accent2); outline-offset:2px; }
+  button:focus-visible, a:focus-visible { outline:3px solid var(--accent2); outline-offset:2px; }
   .hint { margin:10px 0 0; font-size:.9rem; color:var(--muted); }
   #hasil { margin-top:24px; }
   .err { color:var(--err); font-weight:bold; }
@@ -48,6 +60,10 @@
   .ya { color:var(--warn); font-weight:bold; text-shadow:var(--tglow); }
   .tidak { color:var(--ok); font-weight:bold; text-shadow:var(--tglow); }
   .verdict { font-weight:bold; color:var(--accent2); }
+  .alert { margin:12px 0; padding:12px 14px; border:2px solid var(--warn); border-radius:8px; color:var(--warn); font-weight:bold; box-shadow:var(--glow); }
+  .kecil { padding:8px 14px; font-size:.9rem; margin-top:10px; }
+  #pantau { margin-top:24px; }
+  #hitung { color:var(--accent); font-weight:bold; text-shadow:var(--tglow); font-variant-numeric:tabular-nums; }
   .sub2 { color:var(--muted); font-size:.85rem; }
   a { color:var(--accent); font-weight:bold; }
   @media (prefers-reduced-motion: reduce) { body { transition:none; } }
@@ -57,14 +73,16 @@
 <main>
   <div class="top"><div class="kredit">JALZ CRACK</div></div>
   <h1>Cek IP Address</h1>
-  <p class="sub">Track Location Via IP</p>
+  <p class="sub">Lihat lokasi perkiraan, jaringan, dan status VPN dari sebuah IP.</p>
 
   <div class="bar">
-    <input id="ip" type="text" placeholder="Masukkan IP" aria-label="IP address" autocomplete="off">
+    <input id="ip" type="text" placeholder="Contoh: 8.8.8.8" aria-label="IP address" autocomplete="off">
     <button id="tombol" type="button">Cari</button>
   </div>
-  <p class="hint">Tekan Cari untuk melihat IP kamu. Ada jeda 1 menit setelah pencarian.</p>
+  <p class="hint">Kosongkan kolom lalu tekan Cari untuk melihat IP kamu sendiri.</p>
 
+  <div id="pantau"></div>
+  <div id="bocorWrap" style="margin-top:8px"><h2>Tes kebocoran IP (WebRTC)</h2><button id="btnBocor" class="kecil" type="button">Jalankan tes</button><div id="bocor"></div></div>
   <div id="hasil" aria-live="polite"></div>
 </main>
 
@@ -121,14 +139,28 @@ async function perangkatDetail() {
   return { nama: (model || tipe) + ' - ' + br, os: os + (ver ? ' ' + ver : '') };
 }
 function deteksiVpn(d) {
-  if (d.fallback) return 'Tidak Terdeteksi';
+  if (d.fallback) return 'Tidak bisa dicek (sumber cadangan)';
   if (d.is_vpn) return 'Terdeteksi VPN';
   if (d.is_tor) return 'Terdeteksi Tor';
   if (d.is_proxy) return 'Terdeteksi proxy';
-  if (d.is_datacenter) return 'IP milik server hosting';
+  if (d.is_datacenter) return 'Mencurigakan: IP milik server hosting';
   return 'Tidak terdeteksi VPN';
 }
 
+function catatRiwayatIp(ip, vpn) {
+  try {
+    const peta = JSON.parse(localStorage.getItem('riwayatIp') || '{}');
+    const sebelum = peta[ip] ? Object.assign({}, peta[ip]) : null;
+    const r = peta[ip] || { pertama: Date.now(), cek: 0, vpn: 0, vpnTerakhir: 0 };
+    r.cek++; r.terakhir = Date.now();
+    if (vpn) { r.vpn++; r.vpnTerakhir = Date.now(); }
+    peta[ip] = r;
+    const kunci = Object.keys(peta);
+    if (kunci.length > 200) kunci.sort((a, b) => peta[a].terakhir - peta[b].terakhir).slice(0, kunci.length - 200).forEach(k => delete peta[k]);
+    localStorage.setItem('riwayatIp', JSON.stringify(peta));
+    return sebelum;
+  } catch (err) { return null; }
+}
 async function ambil(url, ubah) {
   const asnNorm = v => { const m = String(v == null ? '' : v).match(/\d+/); return m ? 'AS' + m[0] : ''; };
   try {
@@ -169,7 +201,7 @@ async function ipv6Kamu() {
     const x = await (await fetch('https://api64.ipify.org?format=json', { signal: c.signal })).json();
     clearTimeout(t);
     if (x.ip && x.ip.includes(':')) return x.ip;
-    return 'Tidak ada IPv6, koneksimu IPv4';
+    return 'Tidak ada IPv6, koneksimu pakai IPv4';
   } catch (err) { return 'Gagal dicek (diblokir atau timeout), belum tentu tidak ada IPv6'; }
 }
 
@@ -186,7 +218,7 @@ async function cari() {
       try {
         const w = await (await fetch('https://ipwho.is/' + encodeURIComponent(ip).replace(/%3A/gi, ':'))).json();
         if (w.success) {
-          d = { ip: w.ip, fallback: true, note: pesan || 'Not Detect',
+          d = { ip: w.ip, fallback: true, note: pesan || 'respons kosong dari ipapi.is',
             location: { continent: w.continent_code, country: w.country, state: w.region, city: w.city, zip: w.postal, latitude: w.latitude, longitude: w.longitude, timezone: w.timezone && w.timezone.id },
             company: { name: w.connection && w.connection.isp },
             asn: { asn: w.connection && w.connection.asn, org: w.connection && w.connection.org } };
@@ -194,7 +226,7 @@ async function cari() {
       } catch (err) {}
     }
     if (!d.location) {
-      hasil.innerHTML = '<p class="err">IP Not Detect' + (pesan ? ' (' + esc(pesan) + ')' : '') + '. Cek penulisan IP, coba lagi.</p>';
+      hasil.innerHTML = '<p class="err">Data IP tidak bisa diambil' + (pesan ? ' (' + esc(pesan) + ')' : '') + '. Cek penulisan IP, lalu coba lagi.</p>';
       return;
     }
     const l = d.location;
@@ -209,7 +241,8 @@ async function cari() {
     const baris = (judul, rows) => '<h2>' + judul + '</h2><dl>' +
       rows.map(([k, v]) => '<div class="row"><dt>' + k + '</dt><dd>' + v + '</dd></div>').join('') + '</dl>';
 
-    const lokasi = baris('Lokasi', [
+    const isi = rows => rows.map(([k, v]) => '<div class="row"><dt>' + k + '</dt><dd>' + v + '</dd></div>').join('');
+    const lokasi = isi([
       ['Continent', esc(BENUA[l.continent] || l.continent)],
       ['Country', esc(l.country)],
       ['Region', esc(wilayah)],
@@ -218,7 +251,7 @@ async function cari() {
       ['Latitude / Longitude', esc(l.latitude) + ', ' + esc(l.longitude)],
       ['Time zone', esc(l.timezone)],
     ]);
-    const jaringan = baris('Jaringan', [
+    const jaringan = isi([
       ['Versi IP', versiIp(d.ip)],
       ['Organization', esc(org)],
       ['ASN', d.asn ? 'AS' + esc(d.asn.asn) : '-'],
@@ -226,11 +259,24 @@ async function cari() {
       ['Proxy', yaTidak(d.is_proxy)],
       ['Hosting', yaTidak(d.is_datacenter)],
     ]);
-    const keamanan = baris('Deteksi VPN', [
+    const sebelum = catatRiwayatIp(d.ip, !d.fallback && (d.is_vpn || d.is_proxy || d.is_tor));
+    const tgl = t => new Date(t).toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    let teksRiwayat;
+    if (!sebelum) teksRiwayat = 'Baru pertama kali dicek di perangkat ini';
+    else if (sebelum.vpn > 0) teksRiwayat = '<span class="ya">Pernah terdeteksi VPN/proxy ' + sebelum.vpn + ' kali, terakhir ' + esc(tgl(sebelum.vpnTerakhir)) + '</span>';
+    else teksRiwayat = '<span class="tidak">Dicek ' + sebelum.cek + ' kali sejak ' + esc(tgl(sebelum.pertama)) + ', belum pernah terdeteksi VPN</span>';
+    const rowsRiwayat = [['Riwayat di perangkat ini', teksRiwayat]];
+    if (d.vpn && typeof d.vpn === 'object') {
+      if (d.vpn.service) rowsRiwayat.push(['Layanan VPN', esc(d.vpn.service)]);
+      const ls = d.vpn.last_seen_str || (d.vpn.last_seen ? tgl(d.vpn.last_seen > 1e12 ? d.vpn.last_seen : d.vpn.last_seen * 1000) : '');
+      if (ls) rowsRiwayat.push(['Terakhir terlihat sebagai VPN', esc(ls)]);
+    }
+    const keamanan = isi([
       ['Hasil', '<span class="verdict">' + esc(deteksiVpn(d)) + '</span>'],
       ['VPN', yaTidak(d.is_vpn)],
       ['Tor', yaTidak(d.is_tor)],
       ...(d.fallback ? [['Alasan', esc(d.note)]] : []),
+      ...rowsRiwayat,
     ]);
     const p = await perangkatDetail();
     const v6 = await ipv6Kamu();
@@ -243,15 +289,16 @@ async function cari() {
 
     hasil.innerHTML =
       '<div class="head"><span class="ip">' + esc(d.ip) + '</span></div>' +
-      lokasi + perbandingan + jaringan + keamanan + device +
-      '<p class="hint"><a href="' + peta + '" target="_blank" rel="noopener">Lihat di peta</a>. Lokasi hanya perkiraan. Deteksi VPN berdasarkan daftar server yang diketahui, jadi tidak selalu tepat. Device menunjukkan perangkat yang kamu pakai sekarang, bukan pemilik IP yang dicari.</p>';
+      '<h2>Detail IP</h2><dl>' + lokasi + jaringan + keamanan + '</dl>' + perbandingan + device +
+      '<p class="hint"><a href="' + peta + '" target="_blank" rel="noopener">Lihat di peta</a>. Lokasi hanya perkiraan. Deteksi VPN berdasarkan daftar server yang diketahui, jadi tidak selalu tepat. Riwayat VPN hanya berasal dari pengecekanmu sendiri di perangkat ini. Device menunjukkan perangkat yang kamu pakai sekarang, bukan pemilik IP yang dicari.</p>';
   } catch (err) {
-    hasil.innerHTML = '<p class="err">Gagal terhubung. Cek koneksi internetmu, coba lagi.</p>';
+    hasil.innerHTML = '<p class="err">Gagal terhubung. Cek koneksi internetmu, lalu coba lagi.</p>';
   } finally {
-    mulaiJeda(60);
+    if (JEDA_CARI > 0) mulaiJeda(JEDA_CARI); else tombol.disabled = false;
   }
 }
 
+const JEDA_CARI = 0; // detik. Isi 60 untuk mengaktifkan lagi jeda 1 menit.
 let jedaTimer = null;
 function mulaiJeda(detik) {
   let sisa = detik;
@@ -272,8 +319,155 @@ function mulaiJeda(detik) {
 }
 try {
   const sisaMs = Number(localStorage.getItem('jedaSampai')) - Date.now();
-  if (sisaMs > 1000) mulaiJeda(Math.ceil(sisaMs / 1000));
+  if (JEDA_CARI > 0 && sisaMs > 1000) mulaiJeda(Math.ceil(sisaMs / 1000));
 } catch (err) {}
+
+// ===== Pantau jaringan real-time =====
+const JEDA_PANTAU = 15000;
+let pantauAktif = true, pantauTimer = null, sedangCek = false, peringatan = '', sisaPantau = JEDA_PANTAU / 1000;
+let pantauState = { ip: '', asn: '', org: '', cek: 0 };
+let riwayat = [];
+try {
+  riwayat = JSON.parse(localStorage.getItem('riwayatAsn') || '[]');
+  const st = JSON.parse(localStorage.getItem('pantauState') || 'null');
+  if (st) pantauState = st;
+} catch (err) {}
+
+function simpanPantau() {
+  try {
+    localStorage.setItem('riwayatAsn', JSON.stringify(riwayat.slice(0, 20)));
+    localStorage.setItem('pantauState', JSON.stringify(pantauState));
+  } catch (err) {}
+}
+function jam(t) { return new Date(t).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' }); }
+
+async function infoAsn(ip) {
+  const q = encodeURIComponent(ip).replace(/%3A/gi, ':');
+  try {
+    const x = await (await fetch('https://ipwho.is/' + q)).json();
+    if (x.success && x.connection) return { asn: 'AS' + x.connection.asn, org: x.connection.isp || x.connection.org || '' };
+  } catch (err) {}
+  try {
+    const x = await (await fetch('https://api.ipapi.is/?q=' + q)).json();
+    if (x.asn) return { asn: 'AS' + x.asn.asn, org: (x.company && x.company.name) || x.asn.org || '' };
+  } catch (err) {}
+  return null;
+}
+
+async function periksaJaringan() {
+  if (sedangCek) return;
+  sedangCek = true;
+  sisaPantau = JEDA_PANTAU / 1000;
+  const h0 = document.getElementById('hitung');
+  if (h0) h0.textContent = 'Mengecek...';
+  try {
+    const ip = (await (await fetch('https://api64.ipify.org?format=json', { cache: 'no-store' })).json()).ip;
+    pantauState.cek = Date.now();
+    if (ip && ip !== pantauState.ip) {
+      const info = await infoAsn(ip);
+      const asnBaru = info ? info.asn : '';
+      const orgBaru = info ? info.org : '';
+      if (pantauState.ip) {
+        const asnBeda = !!(asnBaru && pantauState.asn && asnBaru !== pantauState.asn);
+        riwayat.unshift({ t: Date.now(), dari: pantauState.asn + ' ' + pantauState.org, ke: asnBaru + ' ' + orgBaru, asnBeda: asnBeda });
+        if (asnBeda) {
+          peringatan = 'Pergeseran jaringan: ' + pantauState.asn + ' ' + pantauState.org + ' → ' + asnBaru + ' ' + orgBaru;
+          try { if (navigator.vibrate) navigator.vibrate(300); } catch (err) {}
+        } else {
+          peringatan = 'IP berganti, ASN sama (' + asnBaru + ')';
+        }
+      }
+      pantauState.ip = ip; pantauState.asn = asnBaru; pantauState.org = orgBaru;
+    }
+    simpanPantau();
+  } catch (err) {}
+  sedangCek = false;
+  tampilPantau();
+}
+
+function tampilPantau() {
+  const el = document.getElementById('pantau');
+  const baris = (k, v) => '<div class="row"><dt>' + k + '</dt><dd>' + v + '</dd></div>';
+  let h = '<h2>Pantau jaringan (real-time)</h2><dl>' +
+    baris('Status', pantauAktif ? '<span class="tidak">Aktif</span>' : '<span class="ya">Dimatikan</span>') +
+    baris('Cek berikutnya', pantauAktif ? '<span id="hitung">' + (sedangCek ? 'Mengecek...' : sisaPantau + ' detik') + '</span>' : '-') +
+    baris('IP sekarang', esc(pantauState.ip || 'Mengecek...')) +
+    baris('ASN sekarang', esc((pantauState.asn || '-') + ' ' + (pantauState.org || ''))) +
+    baris('Terakhir dicek', pantauState.cek ? jam(pantauState.cek) : '-') + '</dl>';
+  if (peringatan) h += '<div class="alert">' + esc(peringatan) + '</div>';
+  h += '<button type="button" id="btnPantau" class="kecil">' + (pantauAktif ? 'Matikan pantau' : 'Nyalakan pantau') + '</button>';
+  if (riwayat.length) {
+    h += '<h2>Riwayat pergeseran</h2><dl>' + riwayat.slice(0, 8).map(r =>
+      baris(esc(new Date(r.t).toLocaleString('id-ID', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })),
+            esc(r.asnBeda ? r.dari + ' → ' + r.ke : 'IP berganti, ASN sama'))).join('') + '</dl>';
+  }
+  el.innerHTML = h;
+  document.getElementById('btnPantau').onclick = () => { pantauAktif = !pantauAktif; peringatan = ''; aturTimerPantau(); tampilPantau(); };
+}
+
+function aturTimerPantau() {
+  clearInterval(pantauTimer);
+  if (!pantauAktif) return;
+  periksaJaringan();
+  pantauTimer = setInterval(() => {
+    sisaPantau--;
+    if (sisaPantau <= 0) periksaJaringan();
+    const h = document.getElementById('hitung');
+    if (h) h.textContent = sedangCek ? 'Mengecek...' : Math.max(sisaPantau, 0) + ' detik';
+  }, 1000);
+}
+window.addEventListener('online', () => { if (pantauAktif) periksaJaringan(); });
+document.addEventListener('visibilitychange', () => { if (!document.hidden && pantauAktif) periksaJaringan(); });
+try { if (navigator.connection) navigator.connection.addEventListener('change', () => { if (pantauAktif) periksaJaringan(); }); } catch (err) {}
+tampilPantau();
+aturTimerPantau();
+
+// ===== Tes kebocoran IP (WebRTC) =====
+function ipPublik(ip) {
+  if (!ip || /\.local$/i.test(ip)) return false;
+  if (ip.includes(':')) return !/^(fe80|fc|fd|::1)/i.test(ip);
+  return !/^(10\.|127\.|169\.254\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|0\.)/.test(ip);
+}
+function ipWebRTC() {
+  return new Promise(resolve => {
+    const temuan = new Set();
+    let selesai = false, pc;
+    const akhir = () => { if (selesai) return; selesai = true; try { pc.close(); } catch (err) {} resolve(Array.from(temuan)); };
+    try {
+      pc = new RTCPeerConnection({ iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] });
+      pc.createDataChannel('x');
+      pc.onicecandidate = e => {
+        if (!e.candidate) { akhir(); return; }
+        const ip = e.candidate.candidate.split(' ')[4];
+        if (ipPublik(ip)) temuan.add(ip);
+      };
+      pc.createOffer().then(o => pc.setLocalDescription(o)).catch(akhir);
+      setTimeout(akhir, 5000);
+    } catch (err) { resolve(null); }
+  });
+}
+async function tesBocor() {
+  const el = document.getElementById('bocor');
+  const btn = document.getElementById('btnBocor');
+  btn.disabled = true;
+  el.innerHTML = '<p>Menguji...</p>';
+  let ipWeb = '';
+  try { ipWeb = (await (await fetch('https://api64.ipify.org?format=json', { cache: 'no-store' })).json()).ip; } catch (err) {}
+  const rtc = await ipWebRTC();
+  let hasil;
+  if (rtc === null) hasil = '<span class="tidak">WebRTC tidak tersedia di browser ini</span>';
+  else if (!rtc.length) hasil = '<span class="tidak">Aman: WebRTC tidak membocorkan IP publik</span>';
+  else if (ipWeb && rtc.every(x => x === ipWeb)) hasil = '<span class="tidak">Aman: IP WebRTC sama dengan IP web</span>';
+  else hasil = '<span class="ya">Ada IP berbeda lewat WebRTC (kemungkinan bocor, atau beda IPv4/IPv6 dari jaringan yang sama)</span>';
+  const baris = (k, v) => '<div class="row"><dt>' + k + '</dt><dd>' + v + '</dd></div>';
+  el.innerHTML = '<dl>' +
+    baris('IP lewat web', esc(ipWeb || '-')) +
+    baris('IP lewat WebRTC', rtc && rtc.length ? rtc.map(esc).join('<br>') : '-') +
+    baris('Hasil', hasil) + '</dl>' +
+    '<p class="hint">Tes ini berjalan di perangkatmu. Hasilnya tidak disimpan. Permintaan hanya dikirim ke api64.ipify.org dan server STUN Google.</p>';
+  btn.disabled = false;
+}
+document.getElementById('btnBocor').addEventListener('click', tesBocor);
 
 tombol.addEventListener('click', cari);
 input.addEventListener('keydown', e => { if (e.key === 'Enter') cari(); });
